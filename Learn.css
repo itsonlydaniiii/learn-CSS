@@ -1,0 +1,538 @@
+/*This is How to make a note*/
+/*CSS integrates into your HTML page and controls the design elements of your HTML code*/
+
+/*body{
+    background-color: black;
+}
+p{
+    font-size: 20px;
+    color: gold;
+}
+    */
+
+/*How to add CSS*/
+/*3 ways:
+    - Write your CSS within the HTML tags - Inline CSS
+    - Write it inside your HTML file enclosed in the <style></style> tags - Internal CSS
+    - Write it in a seperate file with a .css extention and include it in the HTML using the <link> tag - external CSS*/
+
+
+/*Inline CSS*/
+/*In HTML file*/
+/*
+<p style="font-size: 24px; color: orange;">
+This is how you write inline CSS
+</p>
+*/
+
+/*Internal CSS*/
+/*Written in the <style> tag withing the <head> tag*/
+/*In HTML file*/
+/*
+<head>
+    <style>
+    p{
+        color: orange;
+        font-size: 24px;
+    }
+    </style>
+</head>
+*/
+
+/*xternal CSS*/
+/*Storing things in different compartments is always a judicious way of managing.*/
+/*in HTML file*/
+/*
+<head>
+    <link rel="stylesheet" type= "text/css" href="style.css">
+</head>
+*/
+
+/*rel attribute specifies the relationship that the linked file has with the source file
+type specifies the internet media
+value conveys that it is CSS
+href is used to provide the path of the file which we want to link*/
+
+
+/*Writing CSS externally is recommended as it is easy to manage and can be used in multiple places easily*/
+style.css
+p{font-size: 24px;
+color: organge;
+}
+
+/*if you have included inline CSS in your HTML file, it will override all the other CSS*/
+/*CSS is always read by the browser from top to bottom, so code written below will override the 
+above if the selector and property are the same*/
+
+/*An HTML element can be selected using: 
+    - Element selector
+        - p, h1, h2, h4, etc
+    - Class selector
+        - <p class="select-me">
+            .select-me{ jhcgui }
+    - Id selector
+    <p id="select-me">    
+        #select-me 
+    - Attribut selector
+        <input type="text"/>
+            input[type=text]{ jkrfhr }*/
+
+
+/*Playing with colors
+    - direct writing of the color name
+        - 140 names supported
+    - hex values
+        - #000000 is black and #ffffff is white
+    - RGB/RGBA values
+        - rgb(0,0,0) is black and rgb(225,225,225) is white
+        - RGBA the A is the level of transparency
+            - 0.0 is fully transparent and 1.0 is fully opaque
+
+
+/*Manuluplating the background of your webpage*/
+/*you can set it as a color, or an image*/
+/*background color*/
+body{
+    background-color: red;
+}
+/*or*/
+body{
+    background: red;
+}
+
+/*background image*/
+body{
+    background: url(Screenshot);
+}
+/*or*/
+body{
+    background-image: url (Screenshot 2024-08-07 at 14.12.50.png);
+}
+
+/*background-size
+    set/change the height and width of the image or contain or cover
+        - Contain makes sure that the height and width are in accordence with content 
+            ie. the image fits the content area
+        - Cover fits the image to the entirety of the available area*/
+body{
+    background-size: 100% 
+}
+    /*or*/
+body{
+    background-size: cover; 
+}
+    /*or*/
+    body{
+    background-size: contain;
+}
+
+/*background-repeat
+    will the image be repeated to fill the content area or not*/
+body{
+    background-repeat: no-repeat;
+}
+    /*or*/
+body{
+    background-repeat: repeat;
+}
+
+
+/*Beautifying Text*/
+/*Text must be in contrast with the background to enhance readability*/
+p{
+    color: blue;
+}
+/*text alignment play a big role in user experience*/
+/*center, left, right, justify*/
+p{
+    text-align: center;
+}
+
+/*text size*/
+/*1em - 16px*/
+p{
+    font-size: 32px;
+}
+/*or*/
+p{
+    font-size: 2em;
+}
+
+/*font-weight changes the boldness of the font*/
+/*normal, bold, bolder, lighter or 
+100,200,300,400,500,600,700,800,900 normal to boldest*/
+p{
+    font-weight: normal;
+}
+/*or*/
+p{
+    font-weight: 200;
+}
+
+/*font-family changes the font*/
+p{
+    font-family: 'Roboto', sans-serif;
+}
+/*Roboto will be applied if it can be found, otherwise the fall-back system will apply sans-serif*/
+
+/*Text Decoration*/
+/*
+text-decoration-line
+    none
+    underline
+    overline
+    line-through
+text-decoration-style
+    solid
+    dotted
+    dashed
+    double
+    wavy
+text-decoration-color
+    <color>
+    */
+#p1{
+    text-decoration: solid dotted red;
+}
+
+/*text shadow*/
+/*  <color>
+        optional
+        color of shadow
+    offset-x
+        horizontal distance
+    offset-y
+        vertical distance
+    blur-radius
+        optional
+        defaults to 0
+        is a <length> value
+        defines the size of the blur/shadow
+
+/* offset-x / offset-y / blur-radius / color*/
+#p1{
+    text-shadow: 2px 2px 3px red;
+}
+/* color / offset-x / offset-y / blur-radius*/
+#p2{
+    text-shadow: #173459 1px 0 10px;
+}
+
+/*letter spacing*/
+#p1{
+    letter-spacing: normal;
+}
+
+#p2{
+    letter-spacing: 3px;
+}
+
+/*word spacing*/
+#p1{
+    word-spacing: normal;
+}
+
+#p2{
+    word-spacing: 4px;
+}
+
+#p3{
+    word-spacing: 20%;
+}
+
+/*line height*/
+div{
+    line-height: 3px;
+}
+
+/*white space*/
+ /*   normal; collapsed white space
+    nowrap: collapsed white space, suppress line-breaks in the source
+    pre: sequence of white space is preserved, lines are only broken newline characters or at <br/>
+    pre-wrap: preserved white space, lines are broken as above and where needed to fill line boxes
+    pre-line: collapsed white space, fill as above */
+p{
+    white-space: normal;
+}
+
+/*Text direction*/
+p{
+    direction: ltr; /*or rtl*/
+}
+
+
+
+/*height and width*/
+.image{
+    height: 100px;
+    width: 100px;
+}
+/*or*/
+.image{
+    height: 50%;
+    width: 100%;
+}
+
+/*Borders*/
+.image{
+    border-width: 2px;
+    border-style: solid; /*or dashed, dotted*/
+    border-color: black;
+}
+/*or the shorthand*/
+.image{
+    border: 2px solid black;
+}
+
+/*for curved edges border-radius*/
+.image{
+    border: 2px solid black;
+    border-radius: 20px; /*making it 50% will make it a cricle*/
+}
+
+/*border styles*/
+p.none{border-style: none}
+p.hidden{border-style: hidden}
+p.dotted{border-style: dotted}
+p.dashed{border-style: dashed}
+p.solid{border-style: solid}
+p.double{border-style: double}
+p.groove{border-style: groove}
+p.ridge{border-style: ridge}
+p.inset{border-style: inset}
+p.outset{border-style: outset}
+
+/*Individual Sides of Borders*/
+div{
+    border-top-style: solid; /*sam for width*/
+    border-right-style: dotted;
+    border-bottom-style: groove;
+    border-left-style: groove;
+    border-width: 5px;
+    border-color: red;
+    width: 250px;
+    height: 250px;
+    background: lightgrey;
+}
+
+/*Margins*/
+.image{/*or content*/
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+/*or margin shorthand*/
+.image{
+    margin: 20px 30px 20px 30px;
+}
+/*or*/
+.image{
+    margin: 20px 30px; /*will repeat themselves to give the same resuult as above*/
+}
+/*or*/
+.image{
+    margin: 20px; /*will make all margins the same size*/
+}
+
+/*inherit margin value*/
+/*works on almot all CSS properties*/
+div#parent{
+    margin-left: 50px;
+    border: 1px solid green;
+}
+p#children{
+    margin-left: inherit;
+}
+
+/*padding is used to create space around elements inside thhe border*/
+.image{
+    padding-top: 20px;
+    padding-right: 30p;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+/*or can be shorthanded as with margin*/
+
+/*Padding Width*/
+div{
+    width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: blue;
+    height: 100px;
+}
+
+/*padding height*/
+div{
+    height: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: blue;
+    height: 100px;
+}
+
+/*Positioning HTML elements*/
+/* by default the position of all HTML elements are set to static*/
+/*making elements static*/
+.image{
+    position: static;
+}
+
+/*Making an element's position relatve will ensure the element's position 
+keeps changing according to the needs*/
+.image{
+    position: relative;
+    top: 10px; /*or left, right, bottom*/
+}
+
+/*fixed positioning keeps it relative to the screen
+these elements will stay in the same position even if the user scrolls*/
+.image{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+
+/*absolute allows us to position the elements exactly where we want it*/
+.image{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+/*block*/
+/*An element which has a display propety set as block is displayed in a new linke and will fill the width of the block*/
+.content{
+    display: block;
+}
+
+/*inline*/
+/* enables us to set the height and width of the element nd also occupy multiple elements in one row*/
+.content, .image{
+    display: inline-block;
+    height: 20px;
+    width: 50%;
+}
+
+/*Display name none is used to sompletely remove an element*/
+.image{
+    display: none;
+}
+
+/*overflowing content*/
+/*overflow: used to specify what happens if content goes over the specified area*/
+
+/*trim overflowing content*/
+/*will make overflowing content invisible*/
+.trimmed{
+    height: 20px;
+    width: 400px;
+    overflow: hidden;
+}
+
+/*Adding scrollbars*/
+.scroll{
+    height: 50px;
+    width: 200px;
+    overflow: scroll;
+}
+
+/*Overflow auto*/
+/*Automatically detects if the content is trimmed and will add a scrollbar only on the axis where needed*/
+.auto-me{
+    height: 40px;
+    width: 200px;
+    overflow: auto;
+}
+
+/*Overflow visible*/
+/*default behavious - horrible thing*/
+.visible-me{
+    height: 40px;
+    width: 200px;
+    overflow: visible;
+    border: 1px solid #000;
+}
+/*eeu!!!!!!!*/
+
+/*Pseudo Classes*/
+/*Hover
+<input class="hover-me" type="button" value="hover"/>
+*/
+
+.hover.me:hover{
+    background-color: green;
+}
+
+/*changing properties of an active element*/
+/*a link is in an active stage when clicked*/
+link:active{
+    color: red;
+}
+
+/*changing the properies of links that have not been visited*/
+link:link{
+    color: red;
+}
+
+/*changing the properties of links that have already been visited*/
+link:visited{
+    color: black;
+}
+
+/*CSS for Mobile*/
+/*Media Queries*/
+@media screen and (min-width: 720px){ /*min-width, max-height, min-height can also be used*/
+    p{
+        font-size: 16px;
+    }
+}
+
+/*Horizontally centering text and inline elements*/
+.center{
+    text-align: center;
+    width: 100%;
+    border: 3px solid black;
+}
+
+/*Horizontally centering block-level elements*/
+.center{
+    margin: 0 auto;
+    width: 60%;
+    padding: 20px;
+    border: 3px solid black;
+}
+
+/* horizntally centering an image*/
+img{
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    height: auto;
+}
+
+/*left and right align elements*/
+.right{
+    position: absolute;
+    right: 0;
+    width: 60%;
+    padding: 10px;
+    border: 3px solid black;
+}
+/* if the element is wrapped in a container, the container should have a position: relative; declaration*/
+
+/*box models*/
+/*foundation of design and layout in web*/
+/* 
+- Content
+- Padding: gap between content and border
+- Border; width, height etc can be altered
+- margin: area outside the border, is transparent*/
+div{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 40px;
+}
