@@ -526,13 +526,80 @@ img{
 /*foundation of design and layout in web*/
 /* 
 - Content
-- Padding: gap between content and border
-- Border; width, height etc can be altered
-- margin: area outside the border, is transparent*/
+- Padding: gap between content and border (inside the background)
+- Border; width, height etc can be altered (around background - color)
+- margin: area outside the border, is transparent (collapses between 2 elements that are next to each other 
+                                                    aka - 60px + 60px = 60px / which ever margin is largest*/
 div{
     width: 200px;
     height: 200px;
-    padding: 20px;
+    padding: 20px; /* use when you want to seperate an element from it's background */
     border: 5px solid black;
-    margin: 40px;
+    margin: 40px; /*use when you want to seperate two elements */
 }
+/* or */
+* {
+    outline: 2px solid red;
+  }
+/* box-sizing: border-box;
+    Does not combine each individual sizing but squeezes all the sizing into the 'height' and 'width' sizing */
+/* to help visualize the box models, use the Chrome Dev tools 'cmd+shift+c' */
+
+
+/* Block and Inline */
+/* we can modify the box calculation by changing the display property. CSS has two box types: block and inline boxes, 
+which determine element behavior and interaction. The display property controls how HTML elements appear on the webpage. */
+/* default style is display: block - will aprear on top of each other */
+/* do not want to try to put extra padding or margin on inline elements */
+/* Inline-block elements behave like inline elements, but with block-style padding and margin. display: inline-block FLEXBOX IS BETTER*/
+
+/*Divs and spans */
+/* DIV is a block-level element by default. It is commonly used as a container element to group other elements. Divs allow us to divide 
+the page into different blocks and apply styling to those blocks. */
+
+/* HTML:
+<div class="introduction">
+   <h2>Introduction</h2>
+</div>
+
+<div class="main-content">
+   <h2>Main Content</h2>
+</div>
+
+<div class="contact-us">
+   <h2>Contact Us</h2>
+</div>    */
+
+div {
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #EEEEEE;
+  }
+  
+  .introduction {
+    background-color: #548CA8;
+  }
+  
+  .main-content {
+    background-color: #476072;
+  }
+  
+  .contact-us {
+    background-color: #334257;
+  }
+
+
+/* SPAN is an inline-level element by default. It can be used to group text content and inline HTML elements for styling and 
+should only be used when no other semantic HTML element is appropriate.  */
+/* HTML: 
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+  minim veniam, <span class="highlight">quis nostrud <a href="https://www.dictionary.com/browse/exercitation">exercitation</a>
+  ullamco laboris</span> nisi ut aliquip ex ea commodo consequat.   
+</p>   */
+.highlight {
+    background-color: yellow;
+  }
+
