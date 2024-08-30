@@ -605,4 +605,25 @@ should only be used when no other semantic HTML element is appropriate.  */
 
 
   /* Flexbox  */
-  
+  /* HTML
+  <div class="flex-container">
+  <div class="one"></div>
+  <div class="two"></div>
+  <div class="three"></div>
+</div>    */
+
+.flex-container {
+    display: flex;
+  }
+  /* this selector selects all divs inside of .flex-container */
+  .flex-container div {
+    background: peachpuff;
+    border: 4px solid brown;
+    height: 100px;
+    flex: 1;
+  } /* Output is three identically sized boxes aligned horizontally */
+/* Video explination:   https://www.youtube.com/watch?v=phWxA89Dy94    */
+
+
+
+
