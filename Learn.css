@@ -14,7 +14,8 @@ p{
 /*3 ways:
     - Write your CSS within the HTML tags - Inline CSS
     - Write it inside your HTML file enclosed in the <style></style> tags - Internal CSS
-    - Write it in a seperate file with a .css extention and include it in the HTML using the <link> tag - external CSS*/
+    - Write it in a seperate file with a .css extention and include it in the HTML using 
+    the <link> tag - external CSS*/
 
 
 /*Inline CSS*/
