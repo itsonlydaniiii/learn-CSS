@@ -838,5 +838,128 @@ is only one line, align-content has no effect.  */
 }
 
 
+/*TRANSITIONS*/
+/* a way to control animation speed when changing CSS properties*/
+/* Animations that involve transitioning between two states are often called implicit transitions as the states in 
+between the start and final states are implicitly defined by the browser. */
+/* You can control the individual components of the transition with the following sub-properties:
+    - transition-property: Specifies the name or names of the CSS properties to which transitions should be applied. 
+    Only properties listed here are animated during transitions; changes to all other properties occur instantaneously as usual.
+    - transition-duration: Specifies the duration over which transitions should occur. You can specify a single duration that 
+    applies to all properties during the transition, or multiple values to allow each property to transition over a different 
+    period of time.
+    - transition-delay: Defines how long to wait between the time a property is changed and the transition actually begins.  */
+#delay {
+    font-size: 14px;
+    transition-property: font-size;
+    transition-duration: 4s;
+    transition-delay: 2s;
+}
+#delay:hover {
+    font-size: 36px;
+} /* When the mouse hovers over it, after a delay of two seconds, a four-second transition begins which changes the font 
+    size of the text from its normal size to 36px.  */
+
+/* In the following, any element with the "box" class will have combined transitions for: width, height, background-color, transform.*/
+.box {
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #0000FF;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.box:hover {
+    background-color: #FFCCCC;
+    width: 200px;
+    height: 200px;
+    transform: rotate(180deg);
+}
+
+
+/* ANIMATIONS */
+/* CSS animations are just like transitions but they have their own properties. Which makes them a little more complex. 
+An animation allows you to move an element through the page without having to hover over it or click it.  */
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
