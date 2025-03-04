@@ -1,14 +1,13 @@
 /*This is How to make a note*/
 /*CSS integrates into your HTML page and controls the design elements of your HTML code*/
 
-/*body{
+body{
     background-color: black;
 }
 p{
     font-size: 20px;
     color: gold;
 }
-    */
 
 /*How to add CSS*/
 /*3 ways:
@@ -67,16 +66,33 @@ above if the selector and property are the same*/
 
 /*An HTML element can be selected using: 
     - Element selector
-        - p, h1, h2, h4, etc
-    - Class selector
+        - p, h1, h2, h4, etc */
+    p { color: red;} 
+    
+    /* - Class selector
         - <p class="select-me">
-            .select-me{ jhcgui }
-    - Id selector
-    <p id="select-me">    
-        #select-me 
-    - Attribut selector
+            .select-me{ jhcgui } */
+    .select-me { font-size: 3px; }
+
+    /*To cut down on the repetition, we can group these two selectors together as a comma-separated list*/
+    .read,
+    .unread {
+        color: white;
+        background-color: black;
+    }
+
+    /*- Id selector
+    <p id="select-me">   */ 
+    #select-me { size: 12px; }
+    
+    /*- Attribut selector
         <input type="text"/>
-            input[type=text]{ jkrfhr }*/
+            input[type=text]{ jkrfhr }
+    - Universal selector: 
+        select elements of any type */
+    * { 
+        color: purple; 
+    }
 
 
 /*Playing with colors
@@ -107,7 +123,7 @@ body{
 }
 /*or*/
 body{
-    background-image: url (Screenshot 2024-08-07 at 14.12.50.png);
+    background-image: url("Screenshot 2024-08-07 at 14.12.50.png");
 }
 
 /*background-size
